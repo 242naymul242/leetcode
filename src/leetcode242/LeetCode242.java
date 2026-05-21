@@ -17,28 +17,14 @@ public class LeetCode242 {
     public boolean isAnagram(String s, String t) {
         Map<Character, Integer> m = new HashMap<>();
         Map<Character, Integer> m2 = new HashMap<>();
-        int x;
-
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
-            if (m.containsKey(ch)) {
-                x = m.get(ch);
-                x++;
-                m.put(ch, x);
-            } else {
-                m.put(ch, 1);
-            }
+            add(ch, m);
         }
 
         for (int i = 0; i < t.length(); i++) {
-            char c = t.charAt(i);
-            if (m2.containsKey(c)) {
-                x = m2.get(c);
-                x++;
-                m2.put(c, x);
-            } else {
-                m2.put(c, 1);
-            }
+            char ch = t.charAt(i);
+            add(ch, m2);
         }
         if (m.size() != m2.size()){
             return false;
