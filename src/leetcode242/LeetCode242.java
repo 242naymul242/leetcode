@@ -3,6 +3,17 @@ package leetcode242;
 import java.util.*;
 
 public class LeetCode242 {
+
+    public void add(Character ch, Map<Character, Integer> m) {
+        if (m.containsKey(ch)) {
+            int x = m.get(ch);
+            x++;
+            m.put(ch, x);
+        } else {
+            m.put(ch, 1);
+        }
+    }
+
     public boolean isAnagram(String s, String t) {
         Map<Character, Integer> m = new HashMap<>();
         Map<Character, Integer> m2 = new HashMap<>();
