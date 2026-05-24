@@ -7,8 +7,8 @@ import leedcode125.LeetCode125;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 void main() {
     LeetCode242 ob = new LeetCode242();
-    String s = "anagram";
-    String s1 = "nagaram";
+    String s = "anaam";
+    String s1 = "";
     boolean b = ob.isAnagram(s,s1);
     System.out.println(b);
 
